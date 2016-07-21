@@ -1,0 +1,1 @@
+﻿#include "GameSprite.h"GameSprite* GameSprite::createWithFrameName(const char * pszSpriteFrameName) {        auto sprite = new GameSprite();	if (sprite && sprite->initWithSpriteFrameName(pszSpriteFrameName)) {		sprite->autorelease();		return sprite;	}	CC_SAFE_DELETE(sprite);	return nullptr;}
